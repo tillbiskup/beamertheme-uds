@@ -81,8 +81,7 @@
 \beamer@theme@footlinetrue
 
 \DeclareOptionBeamer{footline}[true]{\csname beamer@theme@footline#1\endcsname}
-\DeclareOptionBeamer{footlinetext}{\def\beamer@theme@footlinetext{#1}}
-\ExecuteOptionsBeamer{footlinetext=}
+\def\beamer@theme@footlinetext{\insertshortauthor{} -- \insertshorttitle{}}
 \ProcessOptionsBeamer
 
 \defbeamertemplate*{footline}{UdS theme}[1]{
