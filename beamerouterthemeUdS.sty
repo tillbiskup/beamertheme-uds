@@ -37,7 +37,7 @@
   %\end{beamercolorbox}
 
   % headline
-  \ifnum\thepage=1
+  \ifnum\thepage=0
     \begin{beamercolorbox}[wd=\paperwidth]{frametitle}
       \begin{tikzpicture}
         \useasboundingbox[fill=bg] (0cm, 0.15cm) rectangle(\paperwidth, 1.6cm);
@@ -101,7 +101,7 @@
       \draw[color=fg] (1.8cm, 0.0cm) -- (1.8cm, 0.6cm);
       \draw[color=fg] ([xshift=-1.8cm]current page.south east) -- 
         ([xshift=-1.8cm,yshift=0.6cm]current page.south east);
-      \shade[left color=black,right color=bg] (0.0cm, 0.6cm) rectangle(\paperwidth, .75cm);
+      \shade[left color=bg,right color=black] (0.0cm, 0.6cm) rectangle(\paperwidth, .75cm);
       % print framenumber
       \node[fg] at ([xshift=-0.9cm,yshift=0.3cm]current page.south east) 
         {\insertframenumber{} / \inserttotalframenumber};
